@@ -20,7 +20,6 @@ courseRouter.post("/add", async (req, res) => {
 courseRouter.get("/",async (req,res)=>{
     try {
         const searchQuery = req.query
-        console.log(searchQuery)
         let courses;
 
         if(searchQuery){

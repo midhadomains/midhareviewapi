@@ -19,8 +19,7 @@ reviewRouter.post("/add", async (req, res) => {
 
 reviewRouter.get("/",async (req,res)=>{
     try {
-        const searchQuery = req.query
-      
+        const searchQuery = req.query;
         let reviews;
 
         if(searchQuery){

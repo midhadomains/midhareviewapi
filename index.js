@@ -1,8 +1,9 @@
 const express=require("express");
 const cors = require("cors");
 const { connection } = require("./db");
-const { courseRouter} = require("./routes/courses.routes")
-const { reviewRouter} = require("./routes/reviews.routes")
+const { courseRouter} = require("./routes/courses.routes");
+const { reviewRouter} = require("./routes/reviews.routes");
+const { careerRouter} = require("./routes/career.routes");
 require("dotenv").config();
 
 const app=express();
@@ -15,6 +16,7 @@ app.get("/",(req,res)=>{
 
 app.use("/courses", courseRouter);
 app.use("/reviews", reviewRouter);
+app.use("/career", careerRouter);
 
 app.listen(process.env.PORT,async()=>{
     try {
