@@ -2,15 +2,17 @@ const mongoose = require("mongoose");
 
 
 const coursesSchema = mongoose.Schema({
-    name: String,
-    image: String,
-    price: Number,
-    other: String,
-    instructor: String,
-    link: String,
-    rating: Number,
-    category:String,
-    sub_category:String,
+    name:{type:String, required:true},
+    image: {type:String, required:true},
+    price: {type:Number},
+    other: {type:Number, required:true},
+    instructor: {type:String, required:true},
+    details:{type:[String],required:true},
+    link: {type:String,required:true},
+    rating:  {type:Number},
+    tp:{type:String},
+    category: {type:String,required:true},
+    sub_category: {type:String},
 }, {
     versionKey: false
 })
