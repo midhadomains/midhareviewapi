@@ -5,7 +5,7 @@ const coursesSchema = mongoose.Schema({
     name:{type:String, required:true},
     image: {type:String, required:true},
     price: {type:Number},
-    other: {type:Number, required:true},
+    other: {type:String, required:true},
     instructor: {type:String, required:true},
     details:{type:[String],required:true},
     link: {type:String,required:true},
