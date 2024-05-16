@@ -21,7 +21,7 @@ const careerSchema = mongoose.Schema({
     contact_number: { type: Number },
     contact_person: { type: String },
     closing_date: { type: String }
-}, {
+},{
     versionKey: false
 })
 

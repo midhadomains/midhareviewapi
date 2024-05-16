@@ -8,10 +8,9 @@ const reviewsSchema = mongoose.Schema({
     job: { type: String, required: false },
     p_link: { type: String, required: true },
     l_link: { type: String, required: true },
-    v_link: {type:String,required:false},
-    course:{type:String,required:true},
-    excerpt:{type:String,required:true}
-
+    v_link: {type: String,required:false},
+    course:{type: String,required:true},
+    excerpt:{type: String,required:true}
 }, {
     versionKey: false
 })
@@ -19,3 +18,4 @@ const reviewsSchema = mongoose.Schema({
 const ReviewsModel = mongoose.model("reviews", reviewsSchema)
 
 module.exports = { ReviewsModel }
+

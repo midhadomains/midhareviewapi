@@ -14,7 +14,6 @@ careerRouter.post("/add", async (req, res) => {
     } catch (error) {
         res.status(400).json({ error: error });
     }
-
 })
 
 careerRouter.get("/",async (req,res)=>{
@@ -25,7 +24,7 @@ careerRouter.get("/",async (req,res)=>{
         if(searchQuery){
              career = await CareerModel.find(searchQuery);
         }else{
-             career=await CareerModel.find({})
+             career=await CareerModel.find({});
         }
         
         res.status(200).json(career)
